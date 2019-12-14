@@ -10,8 +10,6 @@ const reactions = input.trim().split('\n').reduce((map, line) => {
   return map;
 }, {});
 
-const TOTAL_ORE = 1e12;
-
 function getNeededOre(fuel) {
   let neededChemicals = { FUEL: fuel };
   const reserves = {};
@@ -39,6 +37,7 @@ const orePer1Fuel = getNeededOre(1);
 
 console.log('Part 1:', orePer1Fuel);
 
+const TOTAL_ORE = 1e12;
 let estimate;
 let newEstimate = Math.floor(TOTAL_ORE / orePer1Fuel);
 do {
